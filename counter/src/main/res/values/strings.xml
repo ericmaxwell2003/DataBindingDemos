@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">DataBindingDemos</string>
+
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+
+</resources>
