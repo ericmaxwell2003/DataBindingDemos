@@ -7,15 +7,14 @@ import android.databinding.PropertyChangeRegistry;
 
 /**
  * Bridge class which does everything android.databinding.BaseObservable does plus
- * extends ViewModel
+ * extends ViewModel.
  */
 
 public class ObservableViewModel extends ViewModel implements Observable {
 
     private transient PropertyChangeRegistry mCallbacks;
 
-    public ObservableViewModel() {
-    }
+    public ObservableViewModel() {}
 
     @Override
     public void addOnPropertyChangedCallback(OnPropertyChangedCallback callback) {
@@ -24,6 +23,7 @@ public class ObservableViewModel extends ViewModel implements Observable {
                 mCallbacks = new PropertyChangeRegistry();
             }
         }
+
         mCallbacks.add(callback);
     }
 
@@ -65,4 +65,11 @@ public class ObservableViewModel extends ViewModel implements Observable {
         mCallbacks.notifyCallbacks(this, fieldId, null);
     }
 
+    public void clearPropertyChangeRegistry() {
+        synchronized (this) {
+            if (mCallbacks != null) {
+                mCallbacks.clear();
+            }
+        }
+    }
 }
