@@ -65,11 +65,4 @@ public class ObservableViewModel extends ViewModel implements Observable {
         mCallbacks.notifyCallbacks(this, fieldId, null);
     }
 
-    public void clearPropertyChangeRegistry() {
-        synchronized (this) {
-            if (mCallbacks != null) {
-                mCallbacks.clear();
-            }
-        }
-    }
 }

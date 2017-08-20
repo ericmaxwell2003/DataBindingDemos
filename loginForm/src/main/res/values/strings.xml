@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">LoginForm</string>
+
+    <!-- Strings related to login -->
+    <string name="login_username_hint">User</string>
+    <string name="login_password_hint">Password</string>
+    <string name="login_connecting_text">Logging in&#8230;</string>
+    <string name="connect_button_label">Connect</string>
+
+    <string name="login_success">Login Success</string>
+    <string name="login_error_bad_pass">Login Error</string>
+
+</resources>

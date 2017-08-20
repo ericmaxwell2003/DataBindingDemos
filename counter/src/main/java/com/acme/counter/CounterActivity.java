@@ -14,7 +14,6 @@ public class CounterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         CounterViewModel viewModel = ViewModelProviders.of(this).get(CounterViewModel.class);
-        viewModel.clearPropertyChangeRegistry();
 
         ActivityCounterBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_counter);
         binding.setViewModel(viewModel);
