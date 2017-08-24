@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DataBindingDemos</string>
+    <string name="app_name">Data Binding Counter</string>
 
     <string name="plus">+</string>
     <string name="minus">-</string>

@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Counter w Animation</string>
+
+    <string name="andy_content_desc">Image of Andy</string>
+
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="even_num_label">Even Number</string>
+
+</resources>

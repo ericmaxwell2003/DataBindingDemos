@@ -1,1 +1,1 @@
-include ':counter', ':loginForm'
+include ':counter', ':loginForm', ':recyclerviewexample', ':counterwithanimation'

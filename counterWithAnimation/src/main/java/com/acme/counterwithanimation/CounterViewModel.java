@@ -1,8 +1,7 @@
-package com.acme.counter;
+package com.acme.counterwithanimation;
 
 import android.databinding.Bindable;
 import android.util.Log;
-import android.view.View;
 
 public class CounterViewModel extends ObservableViewModel {
 
@@ -11,19 +10,24 @@ public class CounterViewModel extends ObservableViewModel {
 
     public void increment() {
         count++;
-        notifyPropertyChanged(BR.countLabel);
+        notifyChange();
         Log.i(TAG, "Counter [" + count + "]");
     }
 
     public void decrement() {
         count--;
-        notifyPropertyChanged(BR.countLabel);
+        notifyChange();
         Log.i(TAG, "Counter: [" + count + "]");
     }
 
     @Bindable
     public String getCountLabel() {
         return String.valueOf(count);
+    }
+
+    @Bindable
+    public boolean isEvenNumberVisible() {
+        return count % 2 == 0;
     }
 
 }
