@@ -5,7 +5,6 @@
 
     <data>
         <variable name="viewModel" type="com.acme.counter.CounterViewModel" />
-        <import type="android.view.View" />
     </data>
 
     <android.support.constraint.ConstraintLayout
@@ -24,7 +23,7 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:text="0"
-            android:text="@{viewModel.countLabel}"
+            android:text="@{String.valueOf(viewModel.count)}"
             />
 
         <Button

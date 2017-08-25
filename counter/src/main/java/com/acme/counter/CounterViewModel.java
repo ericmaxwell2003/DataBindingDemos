@@ -1,29 +1,29 @@
 package com.acme.counter;
 
+import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 import android.util.Log;
 import android.view.View;
 
-public class CounterViewModel extends ObservableViewModel {
+public class CounterViewModel extends BaseObservable {
 
-    private static final String TAG = CounterViewModel.class.getName();
     private int count = 0;
 
     public void increment() {
-        count++;
-        notifyPropertyChanged(BR.countLabel);
-        Log.i(TAG, "Counter [" + count + "]");
+        setCount(getCount() + 1);
     }
 
     public void decrement() {
-        count--;
-        notifyPropertyChanged(BR.countLabel);
-        Log.i(TAG, "Counter: [" + count + "]");
+        setCount(getCount() - 1);
     }
 
     @Bindable
-    public String getCountLabel() {
-        return String.valueOf(count);
+    public int getCount() {
+        return count;
     }
 
+    private void setCount(int count) {
+        this.count = count;
+        notifyPropertyChanged(BR.count);
+    }
 }

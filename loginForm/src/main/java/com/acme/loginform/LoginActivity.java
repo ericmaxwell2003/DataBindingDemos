@@ -25,10 +25,9 @@ public class LoginActivity extends LifecycleActivity {
 
         ActivityLoginBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_login);
 
-        loginButton = findViewById(R.id.login_button);
-
         viewModel = ViewModelProviders.of(this).get(LoginViewModel.class);
         binding.setVm(viewModel);
+        loginButton = binding.loginButton; // more efficient than findById.
 
         bindProgressDialog();
         bindErrors();

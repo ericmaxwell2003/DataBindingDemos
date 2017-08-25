@@ -44,4 +44,5 @@ public class DatabindingUtils {
                 .into(view);
 
     }
+
 }
